@@ -1,3 +1,6 @@
+
+using liliyavaleevaKt_41_23.Database;
+using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
 
@@ -10,6 +13,8 @@ try
     builder.Host.UseNLog();
 
     builder.Services.AddControllers();
+    builder.Services.AddDbContext<StudentDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
     // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
