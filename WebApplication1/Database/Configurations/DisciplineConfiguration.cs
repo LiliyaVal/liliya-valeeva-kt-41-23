@@ -9,7 +9,7 @@ namespace liliyavaleevaKt_41_23.Database.Configurations
     {
         public void Configure(EntityTypeBuilder<Discipline> builder)
         {
-            builder.ToTable("cd_discipline");
+            builder.ToTable("discipline");
             builder.HasKey(d => d.DisciplineId);
 
             builder.Property(d => d.DisciplineId)

@@ -9,7 +9,7 @@ namespace liliyavaleevaKt_41_23.Database.Configurations
     {
         public void Configure(EntityTypeBuilder<Group> builder)
         {
-            builder.ToTable("cd_group");
+            builder.ToTable("group");
             builder.HasKey(g => g.GroupId);
 
             builder.Property(g => g.GroupId)

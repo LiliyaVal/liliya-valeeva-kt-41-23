@@ -9,7 +9,7 @@ namespace liliyavaleevaKt_41_23.Database.Configurations
     {
         public void Configure(EntityTypeBuilder<Specialty> builder)
         {
-            builder.ToTable("cd_specialty");
+            builder.ToTable("specialty");
             builder.HasKey(s => s.SpecialtyId);
 
             builder.Property(s => s.SpecialtyId)

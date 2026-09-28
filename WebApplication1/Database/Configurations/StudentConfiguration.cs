@@ -9,7 +9,7 @@ namespace liliyavaleevaKt_41_23.Database.Configurations
     {
         public void Configure(EntityTypeBuilder<Student> builder)
         {
-            builder.ToTable("cd_student");
+            builder.ToTable("student");
             builder.HasKey(s => s.StudentId);
 
             builder.Property(s => s.StudentId)

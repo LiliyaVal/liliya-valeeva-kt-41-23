@@ -9,7 +9,7 @@ namespace liliyavaleevaKt_41_23.Database.Configurations
     {
         public void Configure(EntityTypeBuilder<Grade> builder)
         {
-            builder.ToTable("cd_grade");
+            builder.ToTable("grade");
             builder.HasKey(g => g.GradeId);
 
             builder.Property(g => g.GradeId)

@@ -18,10 +18,10 @@ namespace WebApplication1.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GET")]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogError("Method was called");
+            _logger.LogError("GET запрос выполнен");
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -32,10 +32,10 @@ namespace WebApplication1.Controllers
             .ToArray();
         }
 
-        [HttpPost(Name = "AddNewSummary")]
-        public string[] AddNewSummary(string newSummary)
+        [HttpPost(Name = "POST")]
+        public string[] Post(string newSummary)
         {
-            _logger.LogError("New method was called");
+            _logger.LogError("POST запрос выполнен");
 
             var list = Summaries.ToList();
             list.Add(newSummary);
